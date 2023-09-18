@@ -7,7 +7,6 @@ import { usersRouter, authenticationRouter, eventsRouter, enrollmentsRouter } fr
 import { loadEnv, connectDb, disconnectDB } from '@/config';
 
 loadEnv();
-//batateeee
 const app = express();
 app
   .use(cors())

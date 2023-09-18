@@ -3,6 +3,7 @@ export type ApplicationError = {
   message: string;
 };
 
+
 export type RequestError = {
   status: number;
   data: object | null;
@@ -11,13 +12,15 @@ export type RequestError = {
   message: string;
 };
 
+
 export type RawErrorViaCEP = {
   data: {
     erro: true;
   }
 }
 
-export type RawObjectViaCEP = {
+
+export type ViaCEPAddressResponse = {
   data: {
     cep: "string";
     logradouro: "string";
@@ -32,6 +35,7 @@ export type RawObjectViaCEP = {
   }
 }
 
+
 export type ObjectViaCEP = {
   logradouro: "string";
   complemento: "string";
@@ -39,5 +43,5 @@ export type ObjectViaCEP = {
   cidade: "string";
   uf: "string";
 }
-
-export type ResponseViaCEP = RawErrorViaCEP | RawObjectViaCEP;
+ //não esquecer de exportar os tipos!
+export type ResponseViaCEP = RawErrorViaCEP | ViaCEPAddressResponse;
